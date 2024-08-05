@@ -90,7 +90,7 @@ const CreatePodcast =() => {
           />
           <div className="flex flex-col gap-2.5">
             <Label className="flex-16 font-bold text-white-1">Selecione a voz IA</Label>
-            <Select onValueChange={value => setVoiceType(value)}>
+            <Select onValueChange={(value:any) => setVoiceType(value)}>
               <SelectTrigger className={cn("text-16 w-full border-none bg-black-1 text-gray-1 focus-visible:ring-offset-orange-1")}>
                 <SelectValue
                   placeholder="Selecione a voz IA"
@@ -140,7 +140,7 @@ const CreatePodcast =() => {
           <GeneratePodcast
             setAudioStorageId={setAudioStorageId}
             setAudio={setAudioUrl}
-            voiceType={voiceType}
+            voiceType={voiceType!}
             audio={audioUrl}
             voicePrompt={voicePrompt}
             setVoicePrompt={setVoicePrompt}
